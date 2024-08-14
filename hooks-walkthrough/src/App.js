@@ -3,6 +3,7 @@ import "./App.css";
 import ComponentC from "./hooks/useContext/ComponentC";
 import CounterOne from "./hooks/useReducer/CounterOne";
 import CounterTwo from "./hooks/useReducer/CounterTwo";
+import CounterThree from "./hooks/useReducer/CounterThree";
 
 
 export const ThemeContext = createContext(null);
@@ -11,7 +12,7 @@ export const ThemeContext = createContext(null);
 function App() {
   return (
     <div>
-      <CounterTwo/>
+      <CounterThree/>
     </div>
   );
 }
