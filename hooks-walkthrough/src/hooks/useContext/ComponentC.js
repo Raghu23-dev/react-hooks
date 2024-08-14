@@ -1,10 +1,11 @@
-import React from 'react'
-import ComponentE from './ComponentE'
+import React from "react";
+import ComponentE from "./ComponentE";
 
 export default function ComponentC() {
   return (
-    <div>ComponentC
-    <ComponentE/>
+    <div>
+      ComponentC
+      <ComponentE />
     </div>
-  )
+  );
 }
