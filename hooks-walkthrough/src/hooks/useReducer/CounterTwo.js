@@ -13,7 +13,8 @@ const reducer = (state,action) => {
         case 'increment2': return {...state,secondCounter : state.secondCounter+action.value}
         case 'decrement2' : return {...state,secondCounter : state.secondCounter-action.value}
         
-        case 'reset':   return initialState 
+        case 'reset1':   return initialState 
+        case 'reset2': return initialState
         default: return state
 
     }
@@ -28,14 +29,19 @@ export default function CounterTwo() {
     <div><h2>{count.firstCounter}</h2> </div>
     <div><h2>{count.secondCounter}</h2> </div>
 
-    <button onClick={()=>{dispatch({type:'increment',value:1})}} >Increment</button>
-    <button onClick={()=>{dispatch({type:'decrement',value:1})}}>decrement</button>
-    <button onClick={()=>{dispatch({type:'increment',value:5})}} >Increment 5</button>
-    <button onClick={()=>{dispatch({type:'decrement',value:5})}}>decrement 5</button>
+    <button onClick={()=>{dispatch({type:'increment',value:1})}} >Increment 1</button>
+    <button onClick={()=>{dispatch({type:'decrement',value:1})}}>Decrement 1</button>
+    <button onClick={()=>{dispatch({type:'increment',value:5})}} >Increment 1 by 5</button>
+    <button onClick={()=>{dispatch({type:'decrement',value:5})}}>Decrement 1 by 5</button>
     
-    <button onClick={()=>{dispatch({type:'reset'})}}>Reset</button>
-    <button onClick={()=>{dispatch({type:'increment2',value:1})}} >Increment2</button>
-    <button onClick={()=>{dispatch({type:'decrement2',value:1})}}>decrement2</button>
+    <button onClick={()=>{dispatch({type:'reset1'})}}>Reset 1</button>
+
+    <button onClick={()=>{dispatch({type:'increment2',value:1})}} >Increment 2</button>
+    <button onClick={()=>{dispatch({type:'decrement2',value:1})}}>Decrement 2</button>
+    <button onClick={()=>{dispatch({type:'increment2',value:5})}} >Increment 2 by  5 </button>
+    <button onClick={()=>{dispatch({type:'decrement2',value:5})}}>Decrement 2 by 5</button>
+    
+    <button onClick={()=>{dispatch({type:'reset2'})}}>Reset 2</button>
     
     </div>
   )
